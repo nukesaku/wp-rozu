@@ -8,5 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
   <header>
-    
+    <div class="header-container">
+      
+    </div>
   </header>
