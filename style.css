@@ -9,3 +9,26 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+/* リセット系 */
+html {
+  font-size: 16px;
+}
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+/* すべての */
+.header-container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.main-container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
