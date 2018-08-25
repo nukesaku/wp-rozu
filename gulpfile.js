@@ -16,3 +16,15 @@ gulp.task('default', function(done) {
   done();
 });
 
+gulp.task('watch', function() {
+  var src = 'src/scss/*.scss';
+  gulp.watch(src, function(done){
+    gulp.src(src)
+      .pipe(sass({
+        outputStyle: 'expanded'
+      }))
+      .on('error', sass.logError)
+      .pipe(gulp.dest('css'));
+    done();
+  });
+});
