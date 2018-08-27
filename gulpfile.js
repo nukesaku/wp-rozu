@@ -17,14 +17,14 @@ gulp.task('default', function(done) {
 });
 
 gulp.task('watch', function() {
-  var src = 'src/scss/*.scss';
+  var src = 'src/scss/style.scss';
   gulp.watch(src, function(done){
     gulp.src(src)
       .pipe(sass({
         outputStyle: 'expanded'
       }))
       .on('error', sass.logError)
-      .pipe(gulp.dest('css'));
+      .pipe(gulp.dest('.'));
     done();
   });
 });
