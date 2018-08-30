@@ -8,12 +8,12 @@
 </head>
 <body <?php body_class(); ?>>
   <header>
-    <div class="header-container">
+    <div class="container">
       <h1 class="site-title"><a href="<?= home_url('/') ?>"><?php bloginfo( 'name' ) ?></a></h1>
     </div>
   </header>
   <nav>
-    <div class="nav-container"></div>
+    <div class="container"></div>
   </nav>
   <div class="keyvisual">
     <div class="keyvisual-container"></div>

@@ -2,7 +2,7 @@
 get_header();
 ?>
 <main>
-  <div class="main-container">
+  <div class="container">
     <div class="maincol">
       <?php
       if (have_posts()) :
