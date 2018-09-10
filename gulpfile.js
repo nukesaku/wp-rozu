@@ -4,14 +4,14 @@ var sass = require('gulp-sass');
 
 gulp.task('default', function(done) {
   // 読み込みファイル
-  gulp.src('src/scss/index.scss')
+  gulp.src('src/scss/style.scss')
   // sassコンパイルの実行
   .pipe(sass({
     // 見慣れたcssに整形
     outputStyle: 'expanded'
   }))
   // 出力先ディレクトリ
-  .pipe(gulp.dest('css'));
+  .pipe(gulp.dest('.'));
   // 実行完了通知(gulp@4.0.0~必要)
   done();
 });
