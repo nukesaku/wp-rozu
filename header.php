@@ -13,7 +13,9 @@
     </div>
   </header>
   <nav>
-    <div class="container"></div>
+    <div class="container">
+      <?php wp_nav_menu( 'theme_location=primary_menu' ); ?>
+    </div>
   </nav>
   <div class="keyvisual">
     <div class="keyvisual-container"></div>
