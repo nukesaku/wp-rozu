@@ -1,6 +1,10 @@
 // プラグインの読み込み ※npm installしたものを読み込む
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+// shellスクリプト実行モジュール
+// var execSync = require('child_process').execSync;
+// var fs = require('fs');
 
 gulp.task('default', function(done) {
   // 読み込みファイル
@@ -17,13 +21,19 @@ gulp.task('default', function(done) {
 });
 
 gulp.task('watch', function() {
-  var src = 'src/scss/style.scss';
+  var src = 'src/scss/*.scss';
   gulp.watch(src, function(done){
+    /* パーシャル更新時にstyle.scssを更新
+       (パーシャル更新時にコンパイルさせる) */
+    // execSync('touch src/scss/style.scss');
+    // fs.utimes('src/scss/style.scss', new Date(), new Date(), function (err) {});
     gulp.src(src)
+      .pipe(sourcemaps.init()) // map生成
       .pipe(sass({
         outputStyle: 'expanded'
       }))
       .on('error', sass.logError)
+      .pipe(sourcemaps.write('map'))
       .pipe(gulp.dest('.'));
     done();
   });

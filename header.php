@@ -9,6 +9,7 @@
 <body <?php body_class(); ?>>
   <header>
     <div class="container">
+      <a href="" class="hamburger"></a>
       <h1 class="site-title"><a href="<?= home_url('/') ?>"><?php bloginfo( 'name' ) ?></a></h1>
     </div>
   </header>

@@ -1,0 +1,20 @@
+/* リセット系 */
+html {
+  font-size: 16px;
+}
+
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+hoge {
+  font-size: 35rem;
+}
