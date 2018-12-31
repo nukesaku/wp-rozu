@@ -1,2 +1,2 @@
 let square = x => x * x;
-console.log( "result =" + square(4) );
+console.log( "result =" + square(5) );

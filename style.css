@@ -9,7 +9,8 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-/* リセット系 */
+/* リセット系
+------------------------------------------------ */
 html {
   font-size: 16px;
 }
@@ -26,11 +27,17 @@ img {
   height: auto;
 }
 
-hoge {
-  font-size: 35rem;
+/* クリアフィックス
+https://kojika17.com/2013/06/clearfix-2013.html
+------------------------------------------------ */
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
 }
 
-/* すべての */
+/* all
+------------------------------------------------ */
 .container {
   margin: 0 auto;
   max-width: 1080px;
@@ -44,8 +51,8 @@ ul {
   list-style: none;
 }
 
-/* クリアフィックス */
-/* ロゴ */
+/* ロゴ
+------------------------------------------------ */
 .site-title {
   font-weight: normal;
   font-size: 1em;
@@ -57,15 +64,58 @@ ul {
 }
 
 .hamburger {
-  display: inline-block;
   width: 50px;
   height: 50px;
-  float: right;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: gray;
 }
 
-/* ぐるなび */
+.hamburger .menu-trigger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger .menu-trigger div {
+  position: absolute;
+  background-color: #FFF;
+  width: 100%;
+  height: 3px;
+  border-radius: 9999px;
+}
+
+.hamburger .menu-trigger div:nth-of-type(1) {
+  top: 0;
+}
+
+.hamburger .menu-trigger div:nth-of-type(2) {
+  top: 13px;
+}
+
+.hamburger .menu-trigger div:nth-of-type(3) {
+  bottom: 0;
+}
+
+.hamburger .menu-trigger.active div:nth-of-type(1) {
+  transform: translateY(14px) rotate(-45deg);
+}
+
+.hamburger .menu-trigger.active div:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger .menu-trigger.active div:nth-of-type(3) {
+  transform: translateY(-14px) rotate(45deg);
+}
+
+/* ぐるなび
+------------------------------------------------ */
 nav {
   max-width: 100%;
+  background: gray;
 }
 
 /*# sourceMappingURL=map/style.css.map */

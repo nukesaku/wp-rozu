@@ -3,4 +3,4 @@
 var square = function square(x) {
   return x * x;
 };
-console.log("result =" + square(4));
+console.log("result =" + square(5));

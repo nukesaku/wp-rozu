@@ -9,8 +9,14 @@
 <body <?php body_class(); ?>>
   <header>
     <div class="container">
-      <a href="" class="hamburger"></a>
       <h1 class="site-title"><a href="<?= home_url('/') ?>"><?php bloginfo( 'name' ) ?></a></h1>
+      <div class="hamburger">
+        <div class="menu-trigger js-trigger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   </header>
   <nav>

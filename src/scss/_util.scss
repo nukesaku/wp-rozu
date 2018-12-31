@@ -1,0 +1,8 @@
+/* クリアフィックス
+https://kojika17.com/2013/06/clearfix-2013.html
+------------------------------------------------ */
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
