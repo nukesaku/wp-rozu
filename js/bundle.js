@@ -98,6 +98,13 @@ var square = function square(x) {
 };
 
 console.log("result =" + square(7));
+document.addEventListener('DOMContentLoaded', function () {
+  [].forEach.call(document.getElementsByClassName('js-trigger'), function (e) {
+    e.addEventListener('click', function () {
+      this.classList.toggle('active');
+    }, false);
+  });
+}, false);
 
 /***/ }),
 

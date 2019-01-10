@@ -73,6 +73,10 @@ ul {
   background-color: gray;
 }
 
+.hamburger .menu-trigger, .hamburger .menu-trigger div {
+  transition: all .4s;
+}
+
 .hamburger .menu-trigger {
   position: relative;
   width: 100%;

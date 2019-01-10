@@ -45,6 +45,9 @@ ul {
   top: 0;
   right: 0;
   background-color: gray;
+  .menu-trigger, .menu-trigger div {
+    transition: all .4s;
+  }
   .menu-trigger {
     position: relative;
     width: 100%;
