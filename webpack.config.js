@@ -3,11 +3,12 @@ module.exports = {
   // development に設定するとソースマップ有効(es5)でJSファイルが出力される
   mode: 'development',
   // ソースマップ有効(es6)
-  devtool: 'source-map',
+  // devtool: 'source-map', // これをコメントアウトするとdeveloper toolのsource mapが更新される なぜ？？
 
   context: __dirname + '/src/js',
   // エントリーポイント
   entry: ['./entry.js'],
+
   output: {
     path: __dirname + '/js',
     filename: 'bundle.js'

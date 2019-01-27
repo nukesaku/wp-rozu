@@ -21,7 +21,13 @@
   </header>
   <nav>
     <div class="container">
-      <?php wp_nav_menu( 'theme_location=primary_menu' ); ?>
+      <?php
+      $args = [
+        'theme_location' => 'primary_menu',
+        'walker' => new Header_Walker_Nav_Menu()
+      ];
+      wp_nav_menu( $args );
+      ?>
     </div>
   </nav>
   <div class="keyvisual">

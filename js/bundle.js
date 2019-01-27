@@ -93,18 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var square = function square(x) {
-  return x * x;
-};
-
-console.log("result =" + square(7));
-document.addEventListener('DOMContentLoaded', function () {
-  [].forEach.call(document.getElementsByClassName('js-trigger'), function (e) {
-    e.addEventListener('click', function () {
-      this.classList.toggle('active');
-    }, false);
-  });
-}, false);
+eval("var square = function square(x) {\n  return x * x;\n};\n\nconsole.log(\"result =\" + square(8));\ndocument.addEventListener('DOMContentLoaded', function () {\n  [].forEach.call(document.getElementsByClassName('js-trigger'), function (e) {\n    e.addEventListener('click', function () {\n      this.classList.toggle('active');\n    }, false);\n  });\n  document.querySelectorAll('#menu-top > .menu-item').forEach(function (e) {\n    e.addEventListener('mouseover', function () {\n      var element = this.querySelector('.sub-menu');\n\n      if (element) {\n        element.classList.remove('hide');\n        element.classList.add('show');\n      }\n    });\n    e.addEventListener('mouseout', function () {\n      var element = this.querySelector('.sub-menu');\n\n      if (element) {\n        element.classList.remove('show');\n        element.classList.add('hide');\n      }\n    });\n  });\n}, false);\n\n//# sourceURL=webpack:///./entry.js?");
 
 /***/ }),
 
@@ -115,10 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./entry.js */"./entry.js");
-
+eval("module.exports = __webpack_require__(/*! ./entry.js */\"./entry.js\");\n\n\n//# sourceURL=webpack:///multi_./entry.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map
