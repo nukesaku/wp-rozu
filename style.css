@@ -63,6 +63,8 @@ ul {
   text-decoration: none;
 }
 
+/* ハンバーガーメニュー
+------------------------------------------------ */
 .hamburger {
   width: 50px;
   height: 50px;
@@ -71,6 +73,10 @@ ul {
   top: 0;
   right: 0;
   background-color: gray;
+}
+
+.hamburger .menu-trigger, .hamburger .menu-trigger div {
+  transition: all .4s;
 }
 
 .hamburger .menu-trigger {
@@ -115,7 +121,20 @@ ul {
 ------------------------------------------------ */
 nav {
   max-width: 100%;
-  background: gray;
+}
+
+nav li a:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f105';
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=map/style.css.map */

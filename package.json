@@ -1,10 +1,11 @@
 {
   "name": "rozu",
   "version": "1.0.0",
-  "description": "",
+  "description": "rozu theme file script of es6 and scss.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hoge": "echo Hello World!"
   },
   "repository": {
     "type": "git",
@@ -13,10 +14,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-sourcemaps": "^2.6.4",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3"
   }
 }
