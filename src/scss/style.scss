@@ -9,7 +9,7 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-@import '_reset.scss', 'util';
+@import '_reset.scss', 'variables', 'util';
 
 /* all
 ------------------------------------------------ */
@@ -24,6 +24,15 @@ footer .container {
 
 ul {
   list-style: none;
+  padding-left: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ロゴ
@@ -32,9 +41,14 @@ ul {
   font-weight: normal;
   font-size: 1em;
   text-align: center;
+  margin: 0;
   a {
     text-decoration: none;
   }
+}
+
+.description {
+  font-size: .8em;
 }
 
 /* ハンバーガーメニュー
@@ -44,10 +58,8 @@ ul {
   width: 50px;
   height: 50px;
   padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: gray;
+  float: right;
+  background-color: $lightskyblue;
   .menu-trigger, .menu-trigger div {
     transition: all .4s;
   }
@@ -107,3 +119,5 @@ nav {
 .hide {
   display: none;
 }
+
+@import 'contents', 'stingerplus';

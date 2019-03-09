@@ -8,8 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
   <header>
-    <div class="container">
-      <h1 class="site-title"><a href="<?= home_url('/') ?>"><?php bloginfo( 'name' ) ?></a></h1>
+    <div class="container clearfix">
       <div class="hamburger">
         <div class="menu-trigger js-trigger">
           <div></div>
@@ -17,6 +16,10 @@
           <div></div>
         </div>
       </div>
+      <h1 class="site-title"><a href="<?= home_url('/') ?>"><?php bloginfo( 'name' ) ?></a></h1>
+      <?php if ( is_home() ) : ?>
+        <p class="description"><?php bloginfo( 'description' ) ?></p>
+      <?php endif; ?>
     </div>
   </header>
   <nav>
@@ -24,6 +27,7 @@
       <?php
       $args = [
         'theme_location' => 'primary_menu',
+        'menu_class' => 'menu hide',
         'walker' => new Header_Walker_Nav_Menu()
       ];
       wp_nav_menu( $args );

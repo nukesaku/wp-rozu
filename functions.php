@@ -17,6 +17,8 @@ add_theme_support( 'post-thumbnails' );
 register_sidebar( [
   'name' => 'ウィジェット1',
   'id' => 'sidebar-1',
+  'before_title'  => '<h4 class="widget-title">',
+  'after_title'   => '</h4>',
 ] );
 
 # カスタムメニュー有効化
