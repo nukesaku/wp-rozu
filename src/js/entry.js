@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   [].forEach.call(document.getElementsByClassName('js-trigger'), (e) => {
     e.addEventListener('click', function () {
       this.classList.toggle('active');
+      let menu_top = document.getElementById('menu-top');
+      menu_top.classList.toggle('hide');
+      menu_top.classList.toggle('show');
     }, false);
   });
 
@@ -25,3 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 }, false);
+
+let slideToggle = (e) => {
+
+}
