@@ -1,0 +1,52 @@
+@mixin slow-link($color: $lightskyblue) {
+  opacity: .7;
+  transition: .4s;
+  color: $color;
+}
+
+.contents{
+  article.content {
+    border-bottom: solid 1px $lightskyblue;
+    padding: 10px 5px;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    a {
+      display: flex;
+      color: black;
+      .eyecatch {
+        flex: 0 0 150px;
+        margin-right: 10px;
+      }
+      &:hover {
+        @include slow-link();
+      }
+      .content-title {
+        font-size: .8rem;
+      }
+      .content-body {
+        font-size: .7rem;
+      }
+      .content-updated-at {
+        font-size: .6rem;
+      }
+    }
+  }
+ }
+
+/* ページネーション
+------------------------------------------------ */
+.pagelink {
+  .page-numbers {
+    color: #FFF;
+    background-color: $lightskyblue;
+    border-radius: 9999px;
+    padding: 5px 10px;
+    &.current {
+      font-size: 1.5rem;
+      color: $lightskyblue;
+      background-color: #FFF;
+
+    }
+  }
+}
